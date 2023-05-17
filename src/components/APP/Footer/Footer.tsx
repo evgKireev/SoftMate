@@ -1,7 +1,7 @@
 import styles from './Footer.module.scss'
 
 const Footer = () => {
-  return <div>dsfnsdgjknsdfgjsdnk</div>
+  return <div></div>
 }
 
 export default Footer
