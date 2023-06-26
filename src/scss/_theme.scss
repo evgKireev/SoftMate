@@ -1,0 +1,17 @@
+html[data-theme='dark'] {
+  --theme-dark: #1c1d22;
+  --theme-white: #ffffff;
+  --grey-disable: #dddbd6;
+  --grey-disable-secondary: #707070;
+  --dark: #1c1d22;
+  --white: #ffffff;
+}
+
+html[data-theme='light'] {
+  --theme-dark: #ffffff;
+  --theme-white: #1c1d22;
+  --grey-disable: #dddbd6;
+  --grey-disable-secondary: #707070;
+  --dark: #1c1d22;
+  --white: #ffffff;
+}

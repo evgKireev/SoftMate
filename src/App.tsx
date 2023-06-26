@@ -3,9 +3,13 @@ import 'react-toastify/dist/ReactToastify.css'
 import './scss/app.scss'
 import { Provider } from 'react-redux'
 
+import { useLayoutEffect, useState } from 'react'
+
 import Router from './pages/Router/Router'
 
 import { store } from './redux/store'
+import { Theme } from './theme/themeType'
+import { Color } from './theme/colors'
 
 function App() {
   return (
@@ -17,6 +21,12 @@ function App() {
 }
 
 const AppWithStore = () => {
+  const [themeMode, setThemeMode] = useState<Theme>('dark') //TODO: theme will come from user state
+
+  useLayoutEffect(() => {
+    document.documentElement.setAttribute('data-theme', themeMode)
+  }, [themeMode])
+
   return (
     <Provider store={store}>
       <App />
