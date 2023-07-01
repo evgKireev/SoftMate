@@ -1,0 +1,26 @@
+@import '../../../scss/vars';
+
+.container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 16px;
+  background: linear-gradient(180deg, $grayLight 0%, $grayDark 100%);
+}
+
+.badge {
+  position: absolute;
+  left: 16px;
+  top: -6.2px;
+  text-align: center;
+  padding: 4.2px 7.8px;
+  border-radius: 100px;
+  background: $blue;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 100%;
+  color: $white;
+}

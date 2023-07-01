@@ -9,7 +9,6 @@ import Router from './pages/Router/Router'
 
 import { store } from './redux/store'
 import { Theme } from './theme/themeType'
-import { Color } from './theme/colors'
 
 function App() {
   return (
