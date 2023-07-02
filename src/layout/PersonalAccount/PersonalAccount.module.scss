@@ -19,6 +19,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 2;
 }
 
 .header {
@@ -62,4 +63,20 @@
   background: $green;
   color: $white;
   font-weight: 600;
+}
+
+.container {
+  position: relative;
+  display: flex;
+  margin-top: 129px;
+}
+
+.content {
+  width: 100%;
+  margin-left: 403px;
+}
+
+.contentMax {
+  width: 100%;
+  margin-left: 108px;
 }
