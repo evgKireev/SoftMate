@@ -37,6 +37,10 @@
   height: 55px;
   width: 55px;
   margin-right: 27px;
+
+  @include XL {
+    margin-right: 142px;
+  }
 }
 
 .title {

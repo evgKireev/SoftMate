@@ -10,3 +10,13 @@ $green: var(--green);
 $grayLight: var(--gray-light);
 $grayDark: var(--gray-dark);
 $blue: var(--blue);
+
+$breakpoints: (
+  XS: 428px,
+  SM: 768px,
+  MD: 1024px,
+  LG: 1170px,
+  XL: 1440px,
+  XXL: 1920px,
+  XXXL: 2560px
+);
