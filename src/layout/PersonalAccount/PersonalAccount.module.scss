@@ -1,4 +1,4 @@
-@import '../../scss/vars';
+@import '../../scss/app';
 
 .wrapper {
   position: relative;
@@ -19,6 +19,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-top: 44px;
+  background: $themeDark;
   z-index: 2;
 }
 
@@ -38,8 +40,24 @@
   width: 55px;
   margin-right: 27px;
 
+  @include XXL {
+    margin-right: 42px;
+  }
+
   @include XL {
-    margin-right: 142px;
+    margin-right: 32px;
+  }
+
+  @include LG {
+    margin-right: 30px;
+  }
+
+  @include MD {
+    margin-right: 28px;
+  }
+
+  @include SM {
+    margin-right: 33px;
   }
 }
 
@@ -49,6 +67,10 @@
   font-size: 40px;
   font-weight: 500;
   line-height: 120%;
+
+  @include XXL {
+    color: red;
+  }
 }
 
 .buttonContainer {

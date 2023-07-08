@@ -1,3 +1,5 @@
+import { type } from 'os'
+
 import React from 'react'
 
 import { Outlet } from 'react-router-dom'
@@ -16,6 +18,10 @@ import { GlobeIcon } from '../../assets/icons/GlobeIcon'
 import { ButtonWithBadge } from '../../components/UI/ButtonWithBadge/ButtonWithBadge'
 
 import { Menu } from '../../components/APP/Menu/Menu'
+
+import { Button } from '../../components/importFileComponents'
+
+import { ButtonTypes } from '../../components/UI/Button/Button'
 
 import styles from './PersonalAccount.module.scss'
 
@@ -45,10 +51,20 @@ export const PersonalAccount = () => {
           <img className={styles.avatar} src={avatar} alt="user-avatar" />
           <h2 className={styles.title}>Привет, Pavel</h2>
           <div className={styles.buttonContainer}>
-            <button className={styles.buttonAddProject} type="button" onClick={() => {}}>
+            <Button
+              title={
+                <>
+                  <PlusIcon />
+                  Создать проект
+                </>
+              }
+              type={ButtonTypes.Primary}
+              onClick={() => {}}
+            />
+            {/* <button className={styles.buttonAddProject} type="button" onClick={() => {}}>
               <PlusIcon />
               Создать проект
-            </button>
+            </button> */}
             <ButtonWithBadge icon={<BellIcon />} onClick={() => {}} numberOfNotices={12} />
             <ButtonWithBadge icon={<GlobeIcon />} onClick={() => {}} numberOfNotices={0} />
           </div>

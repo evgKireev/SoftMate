@@ -6,7 +6,7 @@
   }
 }
 
-@mixin S {
+@mixin SM {
   @media (max-width: #{map-get($breakpoints, S)}) {
     @content;
   }
