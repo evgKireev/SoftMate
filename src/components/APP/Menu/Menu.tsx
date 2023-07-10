@@ -4,6 +4,8 @@ import { Link } from 'react-router-dom'
 
 import { motion } from 'framer-motion'
 
+import classNames from 'classnames'
+
 import { UserIcon } from '../../../assets/icons/UserIcon'
 
 import { FilesIcon } from '../../../assets/icons/FilesIcon'
@@ -25,9 +27,10 @@ import styles from './Menu.module.scss'
 interface IProps {
   isOpen: boolean
   toggleIsOpen: () => void
+  className: string
 }
 
-export const Menu = ({ isOpen, toggleIsOpen }: IProps) => {
+export const Menu = ({ isOpen, toggleIsOpen, className }: IProps) => {
   // TODO: add links
   const variantsMenu = {
     open: {
@@ -70,7 +73,7 @@ export const Menu = ({ isOpen, toggleIsOpen }: IProps) => {
 
   return (
     <motion.ul
-      className={isOpen ? styles.wrapper : styles.wrapperMini}
+      className={isOpen ? classNames(styles.wrapper, className) : classNames(styles.wrapperMini, className)}
       initial="closed"
       exit="closed"
       animate={isOpen ? 'open' : 'closed'}

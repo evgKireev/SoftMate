@@ -1,10 +1,11 @@
+/* eslint-disable max-len */
 import { type } from 'os'
 
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 
 import { Outlet } from 'react-router-dom'
 
-import { useToggle } from 'usehooks-ts'
+import { useToggle, useWindowSize } from 'usehooks-ts'
 
 import { motion } from 'framer-motion'
 
@@ -23,12 +24,16 @@ import { Button } from '../../components/importFileComponents'
 
 import { ButtonTypes } from '../../components/UI/Button/Button'
 
+import { Breackpoint } from '../../scss/media'
+
+import { Burger } from '../../assets/icons/Burger'
+
 import styles from './PersonalAccount.module.scss'
 
 export const PersonalAccount = () => {
   const [isOpenMenu, toggleIsOpenMenu] = useToggle(true)
 
-  const variants = {
+  const variantsXXXL = {
     open: {
       marginLeft: 403,
       transition: {
@@ -44,13 +49,61 @@ export const PersonalAccount = () => {
     }
   }
 
+  const variantsXXL = {
+    open: {
+      marginLeft: 297,
+      transition: {
+        duration: 1
+      }
+    },
+    closed: {
+      marginLeft: 108,
+      transition: {
+        duration: 1,
+        delay: 0.2
+      }
+    }
+  }
+
+  const variantsSM = {
+    open: {
+      marginLeft: 0,
+      transition: {
+        duration: 1
+      }
+    },
+    closed: {
+      marginLeft: 0,
+      transition: {
+        duration: 1,
+        delay: 0.2
+      }
+    }
+  }
+
+  const [variants, setVariants] = useState(variantsXXXL)
+  const { width } = useWindowSize()
+
+  useEffect(() => {
+    width >= Breackpoint.XXXL
+      ? setVariants(variantsXXXL)
+      : width >= Breackpoint.SM
+      ? setVariants(variantsXXL)
+      : setVariants(variantsSM)
+  }, [width])
+
   return (
     <div className={styles.wrapper}>
       <div className={styles.headerWrapper}>
         <div className={styles.header}>
-          <img className={styles.avatar} src={avatar} alt="user-avatar" />
-          <h2 className={styles.title}>Привет, Pavel</h2>
+          <div className={styles.userInfo}>
+            <img className={styles.avatar} src={avatar} alt="user-avatar" />
+            <h2 className={styles.title}>Привет, Pavel</h2>
+          </div>
           <div className={styles.buttonContainer}>
+            <button type="button" onClick={() => {}} className={styles.burgerButton}>
+              <Burger />
+            </button>
             <Button
               title={
                 <>
@@ -60,11 +113,8 @@ export const PersonalAccount = () => {
               }
               type={ButtonTypes.Primary}
               onClick={() => {}}
+              className={styles.button}
             />
-            {/* <button className={styles.buttonAddProject} type="button" onClick={() => {}}>
-              <PlusIcon />
-              Создать проект
-            </button> */}
             <ButtonWithBadge icon={<BellIcon />} onClick={() => {}} numberOfNotices={12} />
             <ButtonWithBadge icon={<GlobeIcon />} onClick={() => {}} numberOfNotices={0} />
           </div>
@@ -72,7 +122,7 @@ export const PersonalAccount = () => {
       </div>
 
       <div className={styles.container}>
-        <Menu isOpen={isOpenMenu} toggleIsOpen={toggleIsOpenMenu} />
+        <Menu isOpen={isOpenMenu} toggleIsOpen={toggleIsOpenMenu} className={styles.menu} />
         <motion.div
           className={isOpenMenu ? styles.content : styles.contentMax}
           initial="closed"
