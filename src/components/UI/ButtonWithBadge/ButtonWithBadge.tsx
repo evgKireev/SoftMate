@@ -1,16 +1,27 @@
 import React from 'react'
 
+import classNames from 'classnames'
+
 import styles from './ButtonWithBadge.module.scss'
+
+export enum ButtonWithBadgeTypes {
+  Large = 'large',
+  Medium = 'medium',
+  Small = 'small'
+}
 
 interface IProps {
   icon: JSX.Element
   onClick: () => void
   numberOfNotices?: number
+  type: ButtonWithBadgeTypes
 }
 
-export const ButtonWithBadge = ({ icon, onClick, numberOfNotices }: IProps) => {
+export const ButtonWithBadge = ({ type, icon, onClick, numberOfNotices }: IProps) => {
+  const buttonClassName = styles[type]
+
   return (
-    <div className={styles.container}>
+    <div className={classNames(styles.container, buttonClassName)}>
       <button type="button" onClick={onClick}>
         {icon}
       </button>

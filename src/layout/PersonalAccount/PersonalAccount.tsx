@@ -16,7 +16,7 @@ import { PlusIcon } from '../../assets/icons/PlusIcon'
 import { BellIcon } from '../../assets/icons/BellIcon'
 import { GlobeIcon } from '../../assets/icons/GlobeIcon'
 
-import { ButtonWithBadge } from '../../components/UI/ButtonWithBadge/ButtonWithBadge'
+import { ButtonWithBadge, ButtonWithBadgeTypes } from '../../components/UI/ButtonWithBadge/ButtonWithBadge'
 
 import { Menu } from '../../components/APP/Menu/Menu'
 
@@ -28,10 +28,13 @@ import { Breackpoint } from '../../scss/media'
 
 import { Burger } from '../../assets/icons/Burger'
 
+import { BurgerMenu } from '../../components/APP/BurgerMenu/BurgerMenu'
+
 import styles from './PersonalAccount.module.scss'
 
 export const PersonalAccount = () => {
   const [isOpenMenu, toggleIsOpenMenu] = useToggle(true)
+  const [isOpenBurger, setIsOpenBurger] = useToggle(false)
 
   const variantsXXXL = {
     open: {
@@ -92,8 +95,13 @@ export const PersonalAccount = () => {
       : setVariants(variantsSM)
   }, [width])
 
+  const handleBurger = () => {
+    setIsOpenBurger()
+  }
+
   return (
     <div className={styles.wrapper}>
+      <BurgerMenu isOpen={isOpenBurger} handleBurger={handleBurger} />
       <div className={styles.headerWrapper}>
         <div className={styles.header}>
           <div className={styles.userInfo}>
@@ -101,7 +109,7 @@ export const PersonalAccount = () => {
             <h2 className={styles.title}>Привет, Pavel</h2>
           </div>
           <div className={styles.buttonContainer}>
-            <button type="button" onClick={() => {}} className={styles.burgerButton}>
+            <button type="button" onClick={handleBurger} className={styles.burgerButton}>
               <Burger />
             </button>
             <Button
@@ -115,8 +123,18 @@ export const PersonalAccount = () => {
               onClick={() => {}}
               className={styles.button}
             />
-            <ButtonWithBadge icon={<BellIcon />} onClick={() => {}} numberOfNotices={12} />
-            <ButtonWithBadge icon={<GlobeIcon />} onClick={() => {}} numberOfNotices={0} />
+            <ButtonWithBadge
+              type={ButtonWithBadgeTypes.Medium}
+              icon={<BellIcon />}
+              onClick={() => {}}
+              numberOfNotices={12}
+            />
+            <ButtonWithBadge
+              type={ButtonWithBadgeTypes.Medium}
+              icon={<GlobeIcon />}
+              onClick={() => {}}
+              numberOfNotices={0}
+            />
           </div>
         </div>
       </div>

@@ -1,0 +1,66 @@
+@import '../../../scss/app.scss';
+
+.wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  padding-block: 16px 118px;
+  padding-inline: 16px;
+  color: yellow;
+  background: $themeDark;
+}
+
+.closed {
+  display: none;
+}
+
+.close {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: auto;
+  min-height: 56px;
+  width: 56px;
+  border-radius: 50%;
+  margin-bottom: 24px;
+  color: white;
+  background: $greyPrimary;
+  transition: all 0.3s;
+
+  &:active {
+    transform: scale(0.9);
+  }
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  grid-gap: 18px;
+  height: 100%;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  grid-gap: 10px;
+  width: 100%;
+  padding: 16px 8px;
+  color: $greyDisable;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 120%;
+  border-radius: 50px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.3) 0%, rgba(103, 103, 103, 0.3) 100%);
+  transition: all 0.3s;
+
+  &:active {
+    transform: scale(0.9);
+  }
+}

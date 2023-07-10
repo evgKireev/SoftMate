@@ -5,9 +5,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 32px;
-  height: 32px;
-  border-radius: 16px;
+  border-radius: 50%;
   background: linear-gradient(180deg, $greyLight 0%, $greyDark 100%);
 }
 
@@ -23,4 +21,19 @@
   font-weight: 700;
   line-height: 100%;
   color: $white;
+}
+
+.large {
+  width: 40px;
+  height: 40px;
+}
+
+.medium {
+  width: 32px;
+  height: 32px;
+}
+
+.small {
+  width: 24px;
+  height: 24px;
 }

@@ -64,7 +64,6 @@
   }
 
   @include MD {
-    padding-bottom: 44px;
     padding-inline: 40px;
   }
 
@@ -121,6 +120,10 @@
     padding: 16px 20px;
     background: $themeDark;
     justify-content: space-between;
+  }
+
+  @include XS {
+    padding-inline: 16px;
   }
 }
 
