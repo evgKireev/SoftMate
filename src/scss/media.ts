@@ -8,7 +8,6 @@ export enum Breackpoint {
   XXXL = 2560
 }
 
-// TODO: chenge to scss
 export const Media = {
   XS: `@media screen and (max-width: ${Breackpoint.XS}px)`,
   SM: `@media screen and (max-width: ${Breackpoint.SM}px)`,

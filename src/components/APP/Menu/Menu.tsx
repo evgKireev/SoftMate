@@ -87,7 +87,7 @@ export const Menu = ({ isOpen, toggleIsOpen, className }: IProps) => {
       opacity: 1,
       transition: {
         duration: 2,
-        delay: 0.87
+        delay: 0.75
       }
     },
     closed: {

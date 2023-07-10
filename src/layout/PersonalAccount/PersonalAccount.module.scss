@@ -2,7 +2,6 @@
 
 .wrapper {
   position: relative;
-  //   max-width: 2560px;
   height: 100vh;
   margin: 0 auto;
   display: flex;
@@ -43,10 +42,6 @@
     position: relative;
     padding-top: 0px;
   }
-
-  @include XS {
-    // padding-top: 88px;
-  }
 }
 
 .header {
@@ -54,7 +49,6 @@
   align-items: center;
   justify-content: space-between;
   flex-grow: 2;
-  //   max-width: 2560px;
   padding-inline: 80px;
   padding-bottom: 29px;
   background: $themeDark;
@@ -206,7 +200,7 @@
 
   @include SM {
     padding-inline: 10px 12px;
-    font-size: 16px;
+    // font-size: 16px;
   }
 
   @include XS {
