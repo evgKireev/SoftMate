@@ -1,1 +1,24 @@
 $default: #121212;
+
+$themeDark: var(--theme-dark);
+$themeWhite: var(--theme-white);
+$greyDisable: var(--grey-disable);
+$greyPrimary: var(--grey-primary);
+$dark: var(--dark);
+$white: var(--white);
+$green: var(--green);
+$secondaryGreenHover: var(--secondary-green-hover);
+$secondaryGreenActive: var(--secondary-green-active);
+$greyLight: var(--grey-light);
+$greyDark: var(--grey-dark);
+$blue: var(--blue);
+
+$breakpoints: (
+  XS: 428px,
+  SM: 768px,
+  MD: 1024px,
+  LG: 1170px,
+  XL: 1440px,
+  XXL: 1920px,
+  XXXL: 2560px
+);

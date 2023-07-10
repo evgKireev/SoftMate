@@ -1,0 +1,53 @@
+@import '../../../scss/vars';
+
+.button {
+  display: flex;
+  align-items: center;
+  grid-gap: 10.5px;
+  justify-self: flex-end;
+  padding: 10px;
+  border-radius: 63.5px;
+  font-size: 20px;
+  font-weight: 600;
+  transition: all 0.3s;
+}
+
+.primary {
+  background: $green;
+  color: $white;
+
+  &:hover {
+    background: $secondaryGreenHover;
+  }
+
+  &:active {
+    background: $secondaryGreenActive;
+  }
+
+  &:disabled {
+    background: none;
+    border: 1px solid $greyDisable;
+    color: $greyDisable;
+  }
+}
+
+.secondary {
+  color: $green;
+  fill: $green;
+  stroke: $green;
+
+  &:hover {
+    border: 1px solid $green;
+  }
+
+  &:active {
+    border: none;
+    background: $secondaryGreenActive;
+  }
+
+  &:disabled {
+    background: none;
+    border: 1px solid $greyDisable;
+    color: $greyDisable;
+  }
+}

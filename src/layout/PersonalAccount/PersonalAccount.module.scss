@@ -1,0 +1,222 @@
+@import '../../scss/app';
+
+.wrapper {
+  position: relative;
+  height: 100vh;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  padding: 44px 80px 29px 80px;
+  background: $themeDark;
+
+  @include LG {
+    padding-block: 47px 26px;
+  }
+
+  @include MD {
+    padding: 44px 40px;
+  }
+
+  @include SM {
+    padding: 108px 20px 28px 20px;
+  }
+
+  @include XS {
+    padding: 88px 16px 16px 16px;
+  }
+}
+
+.headerWrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 44px;
+  background: $themeDark;
+  z-index: 2;
+
+  @include SM {
+    position: relative;
+    padding-top: 0px;
+  }
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-grow: 2;
+  padding-inline: 80px;
+  padding-bottom: 29px;
+  background: $themeDark;
+
+  @include LG {
+    padding-bottom: 26px;
+  }
+
+  @include MD {
+    padding-inline: 40px;
+  }
+
+  @include SM {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+    padding-bottom: 28px;
+    padding-inline: 0px;
+  }
+
+  @include XS {
+    padding-bottom: 16px;
+    padding-inline: 0px;
+  }
+}
+
+.burgerButton {
+  display: none;
+
+  @include SM {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: auto;
+    height: 56px;
+    width: 56px;
+    border-radius: 50%;
+    color: white;
+    background: $greyPrimary;
+  }
+}
+
+.userInfo {
+  display: flex;
+  align-items: center;
+}
+
+.buttonContainer {
+  display: flex;
+  align-items: center;
+  grid-gap: 24px;
+  justify-self: flex-end;
+
+  @include LG {
+    grid-gap: 20px;
+  }
+
+  @include SM {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    padding: 16px 20px;
+    background: $themeDark;
+    justify-content: space-between;
+  }
+
+  @include XS {
+    padding-inline: 16px;
+  }
+}
+
+.avatar {
+  height: 55px;
+  width: 55px;
+  margin-right: 27px;
+
+  @include XXL {
+    margin-right: 42px;
+  }
+
+  @include XL {
+    margin-right: 32px;
+  }
+
+  @include LG {
+    margin-right: 30px;
+  }
+
+  @include MD {
+    margin-right: 28px;
+  }
+
+  @include SM {
+    margin-right: 33px;
+  }
+
+  @include XS {
+    display: none;
+  }
+}
+
+.title {
+  flex-grow: 2;
+  color: $white;
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 120%;
+
+  @include SM {
+    font-size: 32px;
+  }
+
+  @include SM {
+    font-size: 28px;
+  }
+}
+
+.container {
+  position: relative;
+  display: flex;
+  margin-top: 84px;
+
+  @include SM {
+    margin-top: 0;
+  }
+}
+
+.content {
+  width: 100%;
+  margin-left: 403px;
+
+  @include XXL {
+    margin-left: 297px;
+  }
+
+  @include SM {
+    margin-left: 0px;
+  }
+}
+
+.contentMax {
+  width: 100%;
+  margin-left: 108px;
+}
+
+.button {
+  padding-inline: 13px 30px;
+
+  @include SM {
+    padding-inline: 10px 12px;
+    // font-size: 16px;
+  }
+
+  @include XS {
+    position: fixed;
+    bottom: 24px;
+    left: 16px;
+    right: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-inline: 0px;
+  }
+}
+
+.menu {
+  @include SM {
+    display: none;
+  }
+}

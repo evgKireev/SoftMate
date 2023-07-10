@@ -1,22 +1,22 @@
 import { FC, ReactNode } from 'react'
 import classNames from 'classnames'
 
-import styles from './ButtonNew.module.scss'
+import styles from './Button.module.scss'
 
-export enum ButtonNewTypes {
+export enum ButtonTypes {
   Primary = 'primary',
   Secondary = 'secondary'
 }
 
-type ButtonNewProps = {
+type ButtonProps = {
   title: string | ReactNode
-  type: ButtonNewTypes
+  type: ButtonTypes
   onClick?: () => void
   className?: string
   disabled?: boolean
 }
 
-const ButtonNew: FC<ButtonNewProps> = (props) => {
+const Button: FC<ButtonProps> = (props) => {
   const { type, title, onClick, className, disabled } = props
   const buttonClassName = styles[type]
   return (
@@ -26,4 +26,4 @@ const ButtonNew: FC<ButtonNewProps> = (props) => {
   )
 }
 
-export default ButtonNew
+export default Button
